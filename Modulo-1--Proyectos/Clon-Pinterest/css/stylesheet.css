@@ -1,29 +1,6 @@
-@font-face {
-
-    font-family: 'neue_haas_grotesk_text55roman';
-    src: url('../webfonts/nhaasgrotesktxpro-55rg.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-
-    font-family: 'neue_haas_grotesk_text_pr65Md';
-    src: url('../webfonts/nhaasgrotesktxpro-65md.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-
-    font-family: 'neue_haas_grotesk_text_pr75Bd';
-    src: url('../webfonts/nhaasgrotesktxpro-75bd.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-
-}
+/* 
+    Pinteres official color: #E60023
+*/
 
 *{
     margin: 0;
@@ -31,26 +8,270 @@
     box-sizing: border-box;
 }
 
-.logo{
-    width: 32px;
-    height: 32px;
+body{
+    width: 100vw;
+    max-width: 100vw;
+    overflow-x: hidden;
 }
 
-.brand{
-    font-family: 'neue_haas_grotesk_text_pr75Bd';
-    font-size: 20px;
-    font-weight: 400;
-    color: #c8232c;
+/* Heder styles */
+
+header{
+    width: 100vw;
+    max-width: 100vw;
+    height: 70px;
 }
 
 .container{
-    width: 100%;
-    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    height: inherit;
+}
+
+#brand{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.logo{
+    width: 30px;
+    height: 30px;
+    display: flex;
+}
+
+.brand{
+    display: flex;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    color:#e60023;
+    font-size: 20px;
+    font-weight: 900;
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+nav, nav ul{
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#navbar-pinterest{
+    height: 80px;
+}
+
+nav ul li{
+    list-style-type: none;
+    padding: 0 10px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    font-size: 16px;
+    color: #000;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+nav ul li a:hover{
+    text-decoration: underline;
+}
+
+.login{
+    background-color: #e60023;
+    height: 40px;
+    border-radius: 50px;
+    border: none;
+    color: #fff;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    font-size: 16px;
+    padding: 5px 10px;
+    line-height: 16px;
+    font-weight: bold;
+
+}
+
+.sign-in{
+    margin: 0 10px;
+    background-color: #fafafa;
+    height: 40px;
+    border-radius: 50px;
+    border: none;
+    color: #000;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    font-size: 16px;
+    padding: 5px 10px;
+    line-height: 16px;
+    font-weight: bold;
+
+}
+
+/* end Heder styles */
+
+/* Main styles */
+
+#hero{
+    width: 100vw;
+    max-width: 100vw;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-content: space-between;
-    flex-wrap: wrap;
     align-items: center;
 }
 
+h1{
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    font-size: 60px;
+    color: #000;
+    font-weight: bold;
+    margin-top: -250px;
+    position: absolute;
+}
+
+h2{
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    font-size: 60px;
+    color: #000;
+    font-weight: bold;
+    margin-top: -100px;
+    position: absolute;
+}
+
+#yellow{
+    width: 100%;
+    height: 60px;
+    background-color: rgb(255, 253, 146);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    z-index: 999999;
+    position: relative;
+}
+.down{
+    width:100vw;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100000;
+    position: relative;
+}
+.down img{
+    position: relative;
+    display: flex;
+    width: 60px;
+    height: 60px;
+    top: -80px;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+}
+
+.bounce {
+    animation-name: bounce;
+    animation-timing-function: linear;
+}
+@keyframes bounce {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+.down p{
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    font-size: 16px;
+    color: #000;
+    font-weight: bold;
+    position: absolute;
+}
+
+.mosaic{
+    width: 100vw;
+    max-width: 100vw;
+    flex-wrap: wrap;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    background-color: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
+    position: absolute;
+    top: 50vh;
+    
+}
+
+.card{
+    width:13vw;
+    height: 40vh;
+    border-radius:70px;
+    border: 0px solid transparent;
+    margin: 10px;
+    position: relative;
+}
+
+.card img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.mosaic div:nth-child(2){
+    top: 15vh;
+}
+
+.mosaic div:nth-child(3){
+    top: 30vh;
+}
+
+.mosaic div:nth-child(4){
+    top: 40vh;
+}
+
+.mosaic div:nth-child(5){
+    top: 30vh;
+}
+
+.mosaic div:nth-child(6){
+    top: 15vh;
+}
+
+.mosaic div:nth-child(9){
+    top: 15vh;
+}
+
+.mosaic div:nth-child(10){
+    top: 30vh;
+}
+
+.mosaic div:nth-child(11){
+    top: 40vh;
+}
+
+.mosaic div:nth-child(12){
+    top: 30vh;
+}
+
+.mosaic div:nth-child(13){
+    top: 15vh;
+}
+
+.yellow2{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(255, 253, 146);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    z-index: 999999;
+    position: relative;
+}
