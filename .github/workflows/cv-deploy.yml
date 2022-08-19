@@ -24,8 +24,8 @@ jobs:
   # Single deploy job since we're just deploying
   deploy:
     environment:
-      name: github-pages
-      url: 'https://crdgom.github.io/DEVF/cv'
+      name: github-pages-cv
+      url: 'https://crdgom.github.io/DEVF/cv/'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
