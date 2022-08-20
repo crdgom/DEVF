@@ -436,7 +436,7 @@ input[type='find']{
 */
 
 /*    
-        Sección amarilla Azul  
+        Sección  Azul  
         
 */
 
@@ -671,3 +671,133 @@ input[type='find']{
     padding-top:100px;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 }
+
+/*    
+       End Sección  Azul  
+        
+*/
+
+/*    
+        Sección  Rosa 
+        
+*/
+
+.pink{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color: rgb(255, 226, 235);
+    width: 100%;
+    height: 100vh;
+}
+
+.pink-r{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 50%;
+    height: 100vh;
+}
+
+.pink-l{
+    background-image: url("https://picsum.photos/id/237/500");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 50%;
+    height: 100vh;
+}
+
+.pink-img1{
+    background-image: url("https://picsum.photos/id/238/500");
+    background-position: center;
+    background-size: cover;
+    width: 210px;
+    height: 383px;
+    position: relative;
+    top: 202px;
+    left: -303px;
+    
+}
+
+.pink-img2{
+    background-image: url("https://picsum.photos/id/1005/500");
+    background-position: center;
+    background-size: cover;
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    border: 2px solid #f2f2f2;
+    position: relative;
+    top: 137px;
+    left: -395px;
+
+}
+
+.pink-txt{
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    color:#f2f2f2;
+    position: relative;
+    top: 113px;
+    left: -296px;
+}
+
+.pink-heading{
+    font-size: 18px;
+    font-weight: 600;
+    display: block;
+    padding-left: 20px;
+    
+}
+
+.pink-text{
+    font-size: 18px;
+    font-weight: 400;
+    display: block;
+    width: 100px;
+    
+}
+
+.pink-h2{
+    color: rgb(195, 47, 0);
+    width: 430px;
+    text-align: center;
+}
+
+.pink-p{
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    max-width: 400px;
+    font-size: 24px;
+    color: rgb(195, 47, 0);
+    text-align: center;
+    margin-top: 280px;
+}
+
+.pinkbtn{
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    max-width: 400px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: rgb(195, 47, 0);
+    color:rgb(255, 226, 235);
+    text-align: center;
+    margin-top: 20px;
+    border: 0px solid transparent;
+    padding:15px 15px;
+    border-radius: 50px;
+}
+
+
+
+
