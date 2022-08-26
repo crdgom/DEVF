@@ -1,0 +1,27 @@
+
+.box1{
+    margin: 15px;
+    width: 200px;
+    height: 200px;
+    background-color: orange;
+    display: inline-block;
+}
+
+.box2{
+    margin: 15px;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    display: inline-block;
+    position: relative; /* Activo las opciones de posicionamiento let rigth top bottom*/ 
+    top: 30px; /* margen superior 30 pixeles */ 
+    left: 30px; /* margen derecho 30 pixeles */ 
+}
+
+.box3 {
+    margin: 15px;
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    display: inline-block;
+}

@@ -1,0 +1,24 @@
+body{
+    height: 2000px;
+}
+
+.box{
+    padding: 20px;
+    width: 100%;
+    background-color: gray;
+    margin: 25px;
+}
+
+.menu{
+    margin: 50px;
+    padding: 15px;
+    background-color: rebeccapurple;
+    color: white;
+    text-align: end;
+    position: sticky; /* indica que se quedara fijo al alcanzar cierta altura */
+    top: 10px; /*  debe indicarse donde quedara fijo*/
+}
+
+.menu span{
+    padding-left: 20px;
+}

@@ -5,14 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pinterest</title>
-    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" media="(min-width: 960px)" href="css/style-desktop.css">
+    <link rel="stylesheet" media="(max-width: 600px)" href="css/style-desktop.css">
 </head>
 <body>
     <header>
-        <div class="container">
+        <div id="header" class="container">
             <div id="brand">
-                <img id="pinterest-icon" class="logo" src="img/pinterest.svg" alt="Pinterest">
-                <p class="brand">Pinterest</p>
+                <a href="#header"><img id="pinterest-icon" class="logo" src="img/pinterest.svg" alt="Pinterest"></a>
+                    <a class="brand" href="#header"><p>Pinterest</p></a>
             </div>
             <div id="menu">
                 <nav id="navbar-pinterest">
@@ -31,8 +33,8 @@
     </header>
 
     <section id="hero">
-        <h1>Descubre tu próxima</h1>
-        <h2 id="ideas">bla bal bla bla</h2>
+        <h1 id="titulo-principal">Descubre tu próxima</h1>
+        <h2 id="ideas"></h2>
         <div class="mosaic">
             <div class="card">
                 <img src="https://picsum.photos/id/10/500" alt="foto de prueba">
@@ -76,13 +78,45 @@
             <div class="card">
                 <img src="https://picsum.photos/id/1026/500" alt="foto de prueba">
             </div>
+            <div class="mask"></div>
+        </div>
+        <div class="mobile-hero">
+            <div class="mobile-brand">
+                <div>
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	                    viewBox="0 0 512.883 512.883" style="enable-background:new 0 0 512.883 512.883;" xml:space="preserve">
+                        <path style="fill:#CB1F24;" d="M256.441,0c-141.241,0-256,114.759-256,256c0,105.048,62.676,195.09,153.6,234.814
+                            c-0.883-17.655,0-39.724,4.414-59.145c5.297-21.186,32.662-139.476,32.662-139.476s-7.945-16.772-7.945-40.607
+                            c0-37.959,22.069-66.207,49.434-66.207c22.952,0,34.428,17.655,34.428,38.841c0,22.952-15.007,58.262-22.952,90.924
+                            c-6.179,27.366,13.241,49.434,40.607,49.434c48.552,0,81.214-62.676,81.214-135.945c0-56.497-37.959-97.986-106.814-97.986
+                            c-77.683,0-126.234,58.262-126.234,122.703c0,22.069,6.179,37.959,16.772,50.317c4.414,5.297,5.297,7.945,3.531,14.124
+                            c-0.883,4.414-4.414,15.89-5.297,20.303c-1.766,6.179-7.062,8.828-13.241,6.179c-36.193-15.007-52.083-53.848-52.083-97.986
+                            c0-72.386,60.91-159.779,182.731-159.779c97.986,0,162.428,70.621,162.428,146.538c0,100.634-55.614,175.669-137.71,175.669
+                            c-27.366,0-53.848-15.007-62.676-31.779c0,0-15.007,59.145-17.655,70.621c-5.297,19.421-15.89,39.724-25.6,54.731
+                            c22.952,7.062,47.669,10.593,72.386,10.593c141.241,0,256-114.759,256-256S397.683,0,256.441,0"/>
+                    </svg>
+                </div>
+                    
+                <h2>Te damos la bienveida a Pinterest</h2>
+                <button>Continuar con correo electrónico</button>
+                <button>Continuar con Facebook</button>
+                <button>Continuar con Google</button>
+                <p><a href="#">¿Ya eres miembro? Iniciar sesión</a></p>
+                <p>¿Representas a una empresa? <a href="#">Empieza aquí</a></p>
+                <p>
+                    Al continuar, aceptas las
+                    <a href="#">Condiciones del servicio</a>
+                    de Pinterest y reconoces que leíste Nuesrta
+                    <a href="#">Política de privacidad</a>
+                </p>
+            </div>
         </div>
     </section>
+
     <section id="yellow">
-        
         <div class="down">
             <a href="#yellow2" rel="noopener noreferrer"><img class="bounce" src="img/down.png" alt="down arrow"></a>
-            <p><a href="#yellow2">Aquí te mostramos como funciona &#8964;</a></a></p>
+            <p><a href="#yellow2">Aquí te mostramos como funciona &#8964;</a></p>
         </div>
     </section>
     <section class="yellow2">
@@ -108,7 +142,7 @@
                 Piensa en algo que te guste, 
                 como "cena fácil con pollo", 
                 y mira lo que encuentras.</p>
-                <button class="y2rbtn">Explorar</button>
+            <button class="y2rbtn">Explorar</button>
         </div>
     </section>
 
@@ -148,8 +182,136 @@
             <p class="pink-p">Lo mejor de Pinterest es descubrir cosas e ideas nuevas de personas de todo el mundo.</p>
             <button class="pinkbtn">Explorar</button>
         </div>
-
     </section>
+
+    <section class="registro">
+        <div class="mosaic-registro">
+            <div class="card">
+                <img src="https://picsum.photos/id/10/500" alt="foto de prueba">
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/id/100/500" alt="foto de prueba">
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/id/1001/500" alt="foto de prueba">
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/id/1003/500" alt="foto de prueba">
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/id/1004/500" alt="foto de prueba">
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/id/1005/500" alt="foto de prueba">
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/id/1006/500" alt="foto de prueba">
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/id/101/500" alt="foto de prueba">
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/id/1011/500" alt="foto de prueba">
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/id/1016/500" alt="foto de prueba">
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/id/1014/500" alt="foto de prueba">
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/id/102/500" alt="foto de prueba">
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/id/1025/500" alt="foto de prueba">
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/id/1026/500" alt="foto de prueba">
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/id/10/500" alt="foto de prueba">
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/id/100/500" alt="foto de prueba">
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/id/1001/500" alt="foto de prueba">
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/id/1003/500" alt="foto de prueba">
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/id/1004/500" alt="foto de prueba">
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/id/1005/500" alt="foto de prueba">
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/id/1006/500" alt="foto de prueba">
+            </div>
+            <div class="mask"></div>
+        </div>
+        <div class="rl">
+            <h2 class="r-h2">Regístrate para ver tus ideas</h2>
+        </div>
+        <div class="rr">
+            <div class="form-content">
+                <div class="rr-form-logo">
+                    <div class="rr-form-logo-image"></div>
+                </div>
+                <div class="form-top">
+                    <h2 class="form-title">Te damos la vienvenida a Pinterest</h2>
+                    <p class="form-subtitle">Encuentra nuevas ideas para experimentar</p>
+                </div>
+                <div>
+                    <form class="form" action="">
+                        <div class="email-container">
+                            <label class="r-input-label" for="email">Correo electrónico</label>
+                            <input  name="email" id="email"  class="r-input" type="email" placeholder="Correo electrónico">
+                        </div>
+                        <div class="password-container input-separado">
+                            <label class="r-input-label" for="password">Contraseña</label>
+                            <input  name="password" id="password"  class="r-input" type="password" placeholder="Crea una contraseña">
+                        </div>
+                        <div class="age-container">
+                            <label class="r-input-label" for="age">Edad</label>
+                            <input name="age" id="age" class="r-input"  type="text" placeholder="Edad">
+                        </div>
+                        <div class="continuar-container">
+                            <button class="r-btn">Continuar</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="social-login">
+                    <p class="opcion-o">o</p>
+
+                    <button class="r-btnf social-login-btn"><i class="fa-brands fa-facebook"></i> Continuar con Facebook</button>
+                    <button class="r-btng social-login-btn"><i class="fa-brands fa-google"></i> Continuar con Google</button>
+                    <p class="terms">Al continuar,
+                        aceptas las <a>Condiciones del servicio</a>
+                        de Pinterest y reconoces que leiste Nuesrta
+                        <a>Política de privacidad</a>.</p>
+                    </p>
+                    <p class="miembro">¿Ya eres miembro? Iniciar sesion</p>
+                </div>
+                <div class="form-grey">
+                    <a><p>Crea una cuenta para empresa gratuita</p></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <a href="#">Condiciones de servicio</a>
+        <a href="#">Política de privacidad</a>
+        <a href="#">Ayuda</a>
+        <a href="#">Aplicación para iPhone</a>
+        <a href="#">Aplicación para Android</a>
+        <a href="#">Usuarios</a>
+        <a href="#">Colecciones</a>
+        <a href="#">Hoy</a>
+        <a href="#">Explorar</a>
+    </footer>
 
     <script src="js/script.js"></script>
     <script>

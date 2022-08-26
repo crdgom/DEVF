@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    margin: 20px;
+    background-color: rgb(195, 195, 195);
+    width: 80%;
+    height: 700px;
+    position: relative; /* Contenedor relativo ( padre)  */
+}
+
+.box1{
+    margin: 15px;
+    width: 200px;
+    height: 200px;
+    background-color: orange;
+    display: inline-block;
+}
+
+.box2{
+    margin: 15px;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    display: inline-block;
+    position: absolute; /*  indica que se movera con respecto a su padre relativo*/ 
+    top: 25px; /* margen superior 30 pixeles */ 
+    left: 25px; /* margen derecho 30 pixeles */ 
+}
+
+.box3 {
+    margin: 15px;
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    display: inline-block;
+}

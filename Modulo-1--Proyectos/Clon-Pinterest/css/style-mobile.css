@@ -1,0 +1,147 @@
+/* 
+    Pinteres official color: #E60023
+
+    colores para las secciones::after
+
+    amarilla: rgb(255, 253, 146);
+    Azul: rgb(218, 255, 246);
+
+    Font: 
+    ont-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+*/
+
+
+/* 
+    Normalization
+
+*/
+body{
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+
+/*
+
+
+    * Estilos para MOBILE
+    * Version 1.0
+    * INFO: crdgom@gmail.com
+    * Pinterest Clone
+
+
+*/
+
+header{
+    visibility: collapse;
+    height: 0px;
+}
+
+#hero h1, #hero h2{
+    visibility: collapse;
+    height: 0px;
+
+}
+
+#hero{
+    display: flex;
+    width: 100vw;
+    height: 95vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.mosaic{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #000;
+    z-index: 1;
+    overflow: hidden;
+    position: absolute;
+    top:0;
+
+}
+
+.card img{
+    width: calc(97vw/3);
+    height: 25vh;
+    border-radius: 10px;
+    z-index: 2;
+    position: relative;
+    top:-25%;
+}
+
+.mask{
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100vw;
+    height: 95vh;
+    z-index: 3;
+}
+
+#yellow{
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255, 253, 146);
+    z-index: 4;
+    
+}
+
+.down{
+    display: flex;
+    align-items: center;
+}
+
+.down a img{
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+}
+
+.down p a{
+    color: #000;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+}
+
+.mobile-hero{
+    position: absolute;
+    align-content: center;
+    display: flex;
+    width: 100vw;
+    height: 95vh;
+    top:0;
+    left:0;
+    z-index: 5;
+}
+
+.mobile-brand{
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 98vw;
+}
+.mobile-logo{
+    fill: #f2f2f2;
+    width: 50px;
+    height: 50px;
+}
+
+.mobile-logo{
+    color:#fff;
+}

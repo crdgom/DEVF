@@ -1,0 +1,29 @@
+body{
+    margin: 20px;
+    background-color: rgb(195, 195, 195);
+    width: 80%;
+    height: 2700px; /* altura para lograr el scroll */
+}
+
+p {
+    width: 80%;
+}
+
+
+.botonWP{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.botonWP p{
+    padding-left: 10px;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
