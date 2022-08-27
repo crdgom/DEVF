@@ -40,8 +40,6 @@ button, a{
 
 
 */
-
-@media screen and (min-width:920px){
     
 
     /* Heder styles */
@@ -236,11 +234,9 @@ button, a{
 
     }
 
-    .mask{
-        width: 100vw;
-        height: 100vh;
-        background-color: rgba(0,0,0,0.5);
-        position: absolute;
+    #hero .mosaic .mask{
+        display: none;
+        visibility: collapse;
     }
 
     .bounce {
@@ -275,7 +271,7 @@ button, a{
         align-items: center;
         background-color: transparent;
         position: absolute;
-        top: 20vh;
+        top: 35vh;
         overflow: visible;
         z-index: 0;
         
@@ -874,6 +870,13 @@ button, a{
             
     */
 
+    .registro .mosaic-registro .mask{
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0,0,0,0.5);
+        position: absolute;
+    }
+
     .mosaic-registro{
         display: flex;
         flex-direction: row;
@@ -1204,7 +1207,10 @@ button, a{
         text-decoration: none;
     }
 
-}
+    #hero2{
+        visibility: hidden;
+        height: 0px;
+    }
 
 /*    
         END FOOTER

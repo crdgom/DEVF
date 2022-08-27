@@ -1,147 +1,1017 @@
 /* 
-    Pinteres official color: #E60023
+Pinteres official color: #E60023
 
-    colores para las secciones::after
+colores para las secciones::after
 
-    amarilla: rgb(255, 253, 146);
-    Azul: rgb(218, 255, 246);
+amarilla: rgb(255, 253, 146);
+Azul: rgb(218, 255, 246);
 
-    Font: 
-    ont-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+Font: 
+ont-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 */
 
 
 /* 
-    Normalization
+Normalization
 
 */
 body{
-    width: 100vw;
-    overflow-x: hidden;
+width: 100vw;
+overflow-x: hidden;
 }
 
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 }
 
+button, a{
+cursor:pointer;
+}
+
+.hidden{
+visibility: hidden;
+height: 0px;
+}
 /*
 
 
-    * Estilos para MOBILE
-    * Version 1.0
-    * INFO: crdgom@gmail.com
-    * Pinterest Clone
+* Estilos para MOBILE
+* Version 1.0
+* INFO: crdgom@gmail.com
+* Pinterest Clone
 
 
 */
 
+/* Main styles */
+
+/*    
+        HERO STYLE    
+        
+*/
+
 header{
-    visibility: collapse;
-    height: 0px;
+visibility: collapse;
+height: 0px;
 }
 
-#hero h1, #hero h2{
-    visibility: collapse;
-    height: 0px;
+#titulo-principal, #ideas{
+visibility: collapse;
+height: 0px;
 
 }
 
 #hero{
-    display: flex;
-    width: 100vw;
-    height: 95vh;
-    overflow: hidden;
-    position: relative;
+display: flex;
+width: 100vw;
+height: 95vh;
+overflow: hidden;
+position: relative;
+flex-direction: column;
+justify-content: center;
+}
+
+.btn-continuar{
+width: 300px;
+align-self: center;
 }
 
 .mosaic{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    background-color: #000;
-    z-index: 1;
-    overflow: hidden;
-    position: absolute;
-    top:0;
+width: 100vw;
+height: 100vh;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-around;
+background-color: #000;
+z-index: 1;
+overflow: hidden;
+position: absolute;
+top:0;
 
+}
+
+.txt-white{
+color: #fff;
+text-decoration: none;
+font-weight: 400;
+text-align: center;
+}
+
+.txt-bold{
+font-weight: 600;
 }
 
 .card img{
-    width: calc(97vw/3);
-    height: 25vh;
-    border-radius: 10px;
-    z-index: 2;
-    position: relative;
-    top:-25%;
+width: calc(97vw/3);
+height: 20vh;
+border-radius: 10px;
+z-index: 2;
+position: relative;
+top:-25%;
 }
 
-.mask{
-    background-color: rgba(0, 0, 0, 0.3);
-    position: absolute;
-    top: 0;
-    left:0;
-    width: 100vw;
-    height: 95vh;
-    z-index: 3;
+#hero .mosaic .mask{
+background-color: rgba(0, 0, 0, 0.5);
+position: absolute;
+top: 0;
+left:0;
+width: 100vw;
+height: 95vh;
+z-index: 3;
 }
 
 #yellow{
-    height: 5vh;
-    display: flex;
-    justify-content: center;
-    background-color: rgb(255, 253, 146);
-    z-index: 4;
-    
+height: 5vh;
+display: flex;
+justify-content: center;
+background-color: rgb(255, 253, 146);
+z-index: 4;
+
 }
 
 .down{
-    display: flex;
-    align-items: center;
+display: flex;
+align-items: center;
+flex-direction: column;
 }
 
 .down a img{
-    visibility: hidden;
-    width: 0px;
-    height: 0px;
+visibility: hidden;
+width: 0px;
+height: 0px;
 }
 
 .down p a{
-    color: #000;
-    font-weight: 600;
-    text-align: center;
-    text-decoration: none;
+color: #000;
+font-weight: 600;
+text-align: center;
+text-decoration: none;
 }
 
 .mobile-hero{
-    position: absolute;
-    align-content: center;
-    display: flex;
-    width: 100vw;
-    height: 95vh;
-    top:0;
-    left:0;
-    z-index: 5;
+position: absolute;
+display: flex;
+width: 100vw;
+height: 80vh;
+z-index: 5;
+flex-direction: column;
+flex-wrap: nowrap;
+justify-content: space-around;
+align-items: center;
 }
 
 .mobile-brand{
-    display: flex;
-    align-content: center;
-    flex-direction: column;
-    align-items: center;
-    width: 98vw;
+display: flex;
+align-content: center;
+flex-direction: column;
+align-items: center;
+width: 98vw;
+height: 95vh;
+flex-wrap: nowrap;
+justify-content: space-around;
 }
 .mobile-logo{
-    fill: #f2f2f2;
-    width: 50px;
-    height: 50px;
+fill: #fff;
+filter: invert(99%) sepia(0%) saturate(3%) hue-rotate(157deg) brightness(200%) contrast(100%);
+width: 50px;
+height: 50px;
+fill: #fff;
 }
 
 .mobile-logo{
-    color:#fff;
+color:#fff;
 }
+
+.mobile-title{
+color: #fff;
+font-size: 55px;
+text-align: center;
+width: 75vw;
+}
+
+/* Main styles */
+
+/*    
+        HERO STYLE    
+        
+*/
+
+h2{
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    font-size: 60px;
+    color: #000;
+    font-weight: bold;
+}
+
+
+.mask{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    z-index: 3;
+}
+
+.down p{
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    font-size: 16px;
+    color: #000;
+    font-weight: bold;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+}
+
+/*    
+        END HERO STYLE    
+        
+*/
+
+
+/*    
+        Sección Amarilla   
+        
+*/
+
+.yellow2{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(255, 253, 146);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    z-index: 999999;
+    position: relative;
+}
+
+.y2l{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100vw;
+    height: 50vh;
+}
+
+.y2r{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100vw;
+    height: 50vh;
+}
+
+.y2l div:nth-child(1){
+    background-image: url(https://picsum.photos/id/1015/500);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 80px;
+    height: 126px;
+    border-radius: 16px;
+    position: absolute;
+    top: 30%;
+    left: 65%;
+}
+
+.y2l div:nth-child(2) img{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 87px;
+    height: 107px;
+    border-radius: 16px;
+    position: absolute;
+    top: 5%;
+    left: 65%;
+}
+
+.y2l div:nth-child(3) img{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 127px;
+    height: 167px;
+    border-radius: 16px;
+    position: absolute;
+    left: 10%;
+    top: 15%;
+}
+
+.y2l div:nth-child(4) img{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 173px;
+    height: 247px;
+    border-radius: 16px;
+    FONT-WEIGHT: 200;
+    left: 35%;
+    top: 0%;
+}
+
+.y2h2{
+    font-size: 28px;
+    color: rgb(195, 25, 82);
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.y2p{
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    max-width: 400px;
+    font-size: 16px;
+    color: rgb(195, 25, 82);
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.y2rbtn{
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    max-width: 400px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: rgb(195, 25, 82);
+    color:rgb(255, 253, 146);
+    text-align: center;
+    margin-top: 0;
+    border: 0px solid transparent;
+    padding:15px 15px;
+    border-radius: 50px;
+}
+
+.y2form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 30%;
+    height: 100%;
+}
+
+input[type='find']{
+    width: 60vw;
+    height: 55px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border: 0px solid transparent;
+    background-color: #FFF;
+    color: rgb(195, 25, 82);
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    right: 65%;
+    z-index: 999999;
+}
+
+::placeholder{
+    color: rgb(195, 25, 82);
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    opacity: 1;
+}
+
+/*    
+        END Sección Amarilla   
+        
+*/
+
+/*    
+        Sección  Azul  
+        
+*/
+
+.blue{
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(218, 255, 246);
+}
+
+.blue-r{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100vw;
+    height: 50vh;
+}
+
+.blue-l{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100vw;
+    height: 50vh;
+}
+
+.greentxt{
+    color:rgb(0, 107, 108);
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.blue-p{
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    max-width: 370px;
+    font-size: 16px;
+    color: rgb(0, 107, 108);
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.bluebtn{
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    max-width: 400px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: rgb(0, 107, 108);
+    color:rgb(218, 255, 246);
+    text-align: center;
+    margin-top: 20px;
+    border: 0px solid transparent;
+    padding:15px 15px;
+    border-radius: 50px;
+}
+
+.blue-img-place{
+    width: 201px;
+    height: 211px;
+    background-image: url(https://picsum.photos/id/163/500);
+    font-weight: bold;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 32px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    position: relative;
+    top: 10%;
+    right: 5%;
+}
+
+.img1{
+    display: flex;
+    background-image: url(https://picsum.photos/id/248/500);
+    width: 45px;
+    height: 65px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 32px;
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+}
+
+.img2{
+    background-image: url(https://picsum.photos/id/306/500);
+    width: 45px;
+    height: 65px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 32px;
+    position: absolute;
+    bottom: 5px;
+    left: 60px;
+}
+
+.img3{
+    background-image: url(https://picsum.photos/id/367/500);
+    width: 45px;
+    height: 65px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 32px;
+    position: absolute;
+    bottom: 5px;
+    left: 110px;
+}
+
+.blue-img-place h2{
+    font-weight: 500;
+    color: #fff;
+    width: 190px;
+    position: relative;
+    padding-left: 10px;
+    font-size: 24px;
+    top: 0px;
+    left: 0px;
+}
+
+.blue-card{
+    font-weight: 400;
+    color: #fff;}
+
+.blue-card1{
+    background-image: url("https://picsum.photos/id/1026/500");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    width: 114px;
+    height: 119px;
+    background-color: #fff;
+    border-radius: 32px;
+    position: relative;
+    bottom: 40%;
+    left: 42%;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 16px;
+    font-weight: 500;
+    padding-left: 0px;
+    padding-top:0px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+
+.blue-card2{
+    background-image: url("https://picsum.photos/id/106/500");
+    background-position: center;
+    background-size: cover;
+    width: 85px;
+    height: 89px;
+    background-color: #fff;
+    border-radius: 32px;
+    position: relative;
+    bottom: 35%;
+    left: 35%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 10px;
+    border-radius: 16px;
+    padding-left: 0px;
+    padding-top: 0px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+.blue-card3{
+    background-image: url("https://picsum.photos/id/1040/500");
+    background-position: center;
+    background-size: cover;
+    width: 105px;
+    height: 109px;
+    background-color: #fff;
+    border-radius: 32px;
+    position: relative;
+    top: 45%;
+    right: 40%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 10px;
+    border-radius: 16px;
+    padding-left: 0px;
+    padding-top:0px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+
+.blue-card4{
+    background-image: url("https://picsum.photos/id/1080/500");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    width: 105px;
+    height: 109px;
+    background-color: #fff;
+    border-radius: 16px;
+    position: relative;
+    top: 22%;
+    right: 8%;
+    display: flex;
+    align-content: flex-end;
+    justify-content: flex-end;
+    align-items: flex-end;
+    color: #fff;
+    font-size: 10px;
+    border-radius: 16px;
+    padding-left: 0px;
+    padding-top:0px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+
+/*    
+    End Sección  Azul  
+        
+*/
+
+/*    
+        Sección  Rosa 
+        
+*/
+
+.pink{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color: rgb(255, 226, 235);
+    width: 100vw;
+    height: 100vh;
+}
+
+.pink-r{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100vw;
+    height: 50vh;
+}
+
+.pink-l{
+    background-image: url("https://picsum.photos/id/237/500");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100vw;
+    height: 50vh;
+}
+
+.pink-img1{
+    background-image: url("https://picsum.photos/id/238/500");
+    background-position: center;
+    background-size: cover;
+    width: 100px;
+    height: 200px;
+    position: relative;
+    top: 20%;
+    right: 30%;
+    border-radius: 5px;
+    
+}
+
+.pink-img2{
+    background-image: url("https://picsum.photos/id/1005/500");
+    background-position: center;
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #f2f2f2;
+    position: relative;
+    top: 15%;
+    right: 40%;
+
+}
+
+.pink-txt{
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    color:#f2f2f2;
+    text-align: center;
+    position: relative;
+    top: 11%;
+    right: 18%;
+}
+
+.pink-heading{
+    font-size: 18px;
+    font-weight: 600;
+    display: block;
+}
+
+.pink-text{
+    font-size: 18px;
+    font-weight: 400;
+    display: block;
+    width: 90vw;
+    
+}
+
+.pink-h2{
+    color: rgb(195, 47, 0);
+    width: 90vw;
+    text-align: center;
+    font-size: 28   px;
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.pink-p{
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    max-width: 400px;
+    font-size: 16px;
+    color: rgb(195, 47, 0);
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.pinkbtn{
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: rgb(195, 47, 0);
+    color:rgb(255, 226, 235);
+    text-align: center;
+    margin-top: 20px;
+    border: 0px solid transparent;
+    padding:15px 15px;
+    border-radius: 50px;
+}
+
+/*    
+    END Sección  Rosa 
+        
+*/
+
+/*    
+        Sección  Registro
+        
+*/
+
+.mosaic-registro{
+    visibility: collapse;
+    height: 0px;
+}
+
+.mosaic-registro .card{
+    visibility: collapse;
+    height: 0px;
+}
+
+.mosaic-registro .card img{
+    visibility: collapse;
+    height: 0px;
+}
+
+.mosaic-registro div:nth-child(2){
+    bottom:20vh;
+}
+.mosaic-registro div:nth-child(4){
+    bottom:20vh;
+}
+.mosaic-registro div:nth-child(6){
+    bottom:20vh;
+}
+.mosaic-registro div:nth-child(9){
+    bottom:20vh;
+}
+.mosaic-registro div:nth-child(11){
+    bottom:20vh;
+}
+.mosaic-registro div:nth-child(13){
+    bottom:20vh;
+}
+.mosaic-registro div:nth-child(16){
+    bottom:20vh;
+}
+.mosaic-registro div:nth-child(18){
+    bottom:20vh;
+}
+.mosaic-registro div:nth-child(20){
+    bottom:20vh;
+}
+
+.registro{
+    visibility: collapse;
+    height: 0px;
+}
+.registro .mosaic-registro .mask{
+    visibility: collapse;
+    height: 0px;
+}
+
+.rl{
+    visibility: collapse;
+    height: 0px;
+
+}
+
+.rr{
+    visibility: collapse;
+    height: 0px;
+}
+
+.r-h2{
+    visibility: collapse;
+    height: 0px;
+}
+
+.rr .form-content{
+    visibility: collapse;
+    height: 0px;
+}
+
+.form{
+    visibility: collapse;
+    height: 0px;
+}
+
+.rr-form-logo{
+    visibility: collapse;
+    height: 0px;
+}
+
+.rr-form-logo-image{
+    visibility: collapse;
+    height: 0px;
+}
+
+.form-top{
+    visibility: collapse;
+    height: 0px;
+}
+
+.form-title{
+    visibility: collapse;
+    height: 0px;
+}
+
+.form-subtitle{
+    visibility: collapse;
+    height: 0px;
+}
+
+.email-container, .password-container
+,.age-container, .continuar-container{
+    visibility: collapse;
+    height: 0px;
+}
+
+.r-input{
+    visibility: collapse;
+    height: 0px;
+}
+
+.r-input-label label{
+    visibility: collapse;
+    height: 0px;
+}
+
+.continuar-container{
+    display: flex;
+    margin-top: 15px;
+    visibility: visible;
+    height: auto;
+}
+
+.r-btn{
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    max-width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: rgb(195, 25, 82);
+    color:#fff;
+    text-align: center;
+    clear:both;
+    border: 0px solid transparent;
+    padding:15px 15px;
+    border-radius: 50px;
+}
+
+.social-login{
+    visibility: collapse;
+    height: 0px;
+}
+
+.opcion-o{
+    visibility: collapse;
+    height: 0px;
+}
+
+.social-login-btn{
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    width: 300px;
+    font-size: 16px;
+    font-weight: 400;
+    color:#fff;
+    text-align: center;
+    clear:both;
+    border: 0px solid transparent;
+    padding:15px 15px;
+    border-radius: 50px;
+}
+
+i{
+    padding-right: 10px;
+}
+
+.r-btnf{
+    background-color: #1877f2;
+    margin-bottom: 10px;
+}
+.r-btng{
+    background-color: #fff;
+    border: 1px solid #dadce0;
+    color:#000;
+    margin-bottom: 10px;
+}
+
+.terms{
+    visibility: collapse;
+    height: 0px;
+}
+
+.terms a {
+    visibility: collapse;
+    height: 0px;
+}
+
+.miembro{
+    visibility: collapse;
+    height: 0px;
+}
+
+.form-grey{
+    visibility: collapse;
+    height: 0px;
+}
+
+
+
+/*    
+    END  Sección  Registro
+        
+*/
+/*    
+        FOOTER
+        
+*/
+
+footer{
+    visibility: collapse;
+    height: 0px;
+}
+
+footer a{
+    visibility: collapse;
+    height: 0px;
+}
+
+#hero2 {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#hero2 .mobile-hero .mobile-title{
+    font-size: 35px;
+    width: 100%;
+}
+
+.card2 img {
+    top: 0%;
+}
+
+.mobile-hero-footer a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 15px 10px;
+}
+/*    
+    END FOOTER
+    
+*/
