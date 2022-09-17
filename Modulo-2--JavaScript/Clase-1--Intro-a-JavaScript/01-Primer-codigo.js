@@ -36,7 +36,8 @@ console.log(1>0);
 
 // # prompt()
 
-// !prompt("Escribe tu nombre");
+// !let name1 = prompt("Escribe tu nombre");
+// !console.log(name1);
 
 // # Variables y Constantes
 
@@ -50,7 +51,7 @@ console.log(1>0);
     ************************* 
 */
 
-// # Numeros
+// # Números
 
 var number = 2;
 var decimal = 5.9;
@@ -79,7 +80,7 @@ console.log(boolean);
     ************************* 
 */
 
-// # Numeros
+// # Números
 
 let numberOne = 5;
 let decimalOne = 5.9;
@@ -108,7 +109,7 @@ console.log(booleanOne);
     ************************* 
 */
 
-// # Numeros
+// # Números
 
 const CUADRADO = 4;
 const PI = 3.1415;
