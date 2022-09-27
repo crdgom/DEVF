@@ -1,13 +1,381 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Banco de Carlos | Cajero Automático</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../Modulo-2--Proyecto/css/style.css">
 </head>
+
 <body>
-    
+    <section id="main-screen" class="main-screen">
+        <div class="main-screen-content">
+            <div class="main-screen-content-logo">
+                <img src="img/1x/cb-logo.png" alt="">
+            </div>
+            
+            <div class="main-screen-content-action-button">
+                <button onclick="startFunction()" class="action-button">Start</button>
+            </div>
+        </div>
+    </section>
+    <section id="user-login" class="user-login">
+        <div class="user-login-title">
+            <h2>Login into your account</h2>
+        </div>
+        <div class="user-login-form">
+            <form class="login-form" action="">
+                <div id="error-data" class="error-data">
+                    <p>incorrect username or password, check your input and try again.</p>
+                </div>
+                <div class="form-item">
+                    <input class="form-input" type="text" name="user" id="user-input" placeholder="user name">
+                </div>
+                <div class="form-item">
+                    <input class="form-input" type="password" name="password" id="user-password"
+                        placeholder="user password">
+                </div>
+                <div class="form-item">
+                    <input id="form-input" class="form-button" onclick="login();" type="submit"
+                        value="Login">
+                </div>
+            </form>
+        </div>
+    </section>
+    <section id="user-dashboard" class="user-dashboard">
+        <div class="user-dashboard-content">
+            <div id="user-dashboard-content-actions" class="user-dashboard-content-actions">
+                <div id="user-dashboard-content-action-menu" class="user-dashboard-content-action-menu">
+                    <div id="user-dashboard-user-name" class="user-dashboard-content-title">
+                    </div>
+                    <div class="user-dashboard-content-subtitle">
+                        <h2>What do you want to do?</h2>
+                    </div>
+                    <div class="user-dashboard-content-actions-item">
+                        <button onclick="showBalance()" class="action-button">Check Balance</button>
+                    </div>
+                    <div class="user-dashboard-content-actions-item">
+                        <button onclick="showWithdraw()" class="action-button">Withdraw</button>
+                    </div>
+                    <div class="user-dashboard-content-actions-item">
+                        <button onclick="showDeposit()" class="action-button">Deposit</button>
+                    </div>
+                    <div class="user-dashboard-content-actions-item">
+                        <button onclick="showMovements()" class="action-button">Movements</button>
+                    </div>
+                </div>
+                
+                <div id="user-dashboard-content-action-area" class="user-dashboard-content-action-area">
+                    <form class="deposit-withdraw-form" action="">
+                        <div id="withdraw">
+                            <div class="form-item">
+                                <input class="form-input" type="number" name="withdraw" id="withdraw-input" placeholder="amount to withdraw">
+                            </div>
+                            <div class="form-item">
+                                <input id="form-input-withdraw" class="form-input" name="withdraw-button" onclick="withdrawf()" type="submit"
+                                    value="Withdraw">
+                            </div>
+                        </div>
+                        <div id="deposit">
+                            <div class="form-item">
+                                <input class="form-input" type="number" name="deposit" id="deposit-input" placeholder="amount to deposit">
+                            </div>
+                            <div class="form-item">
+                                <input id="form-input-deposit" class="form-input" onclick="depositf();" type="submit"
+                                    value="Deposit">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="user-dashboard-content-action-button">
+                <button onclick="logOut()" class="action-button">Logout</button>
+            </div>
+        </div>
+    </section>
+    <script>
+        // Función para ocultar la pantalla principal y mostrar el formulario de login
+        function startFunction() {
+            document.getElementById("main-screen").style.display = "none";
+            document.getElementById("user-login").style.visibility = "visible";
+        }
+
+        let users = [
+            {
+                "id": 1,
+                "name": "Carlos Moctezuma",
+                "password": "1111",
+                "balance": 900,
+                "movements": {
+                    "withdraw": [
+                        {
+                            "date": "2022-09-05",
+                            "amount": 10
+                        },
+                        {
+                            "date": "2022-09-06",
+                            "amount": 20
+                        }
+                    ],
+                    "deposit": [
+                        {
+                            "date": "2022-09-05",
+                            "amount": 10
+                        },
+                        {
+                            "date": "2022-09-06",
+                            "amount": 20
+                        }
+                    ]
+                }
+            },
+            {
+                "id": 2,
+                "name": "Joe Doe",
+                "password": "2222",
+                "balance": 150,
+                "movements": {
+                    "withdraw": [
+                        {
+                            "date": "2022-09-05",
+                            "amount": 10
+                        },
+                        {
+                            "date": "2022-09-06",
+                            "amount": 20
+                        }
+                    ],
+                    "deposit": [
+                        {
+                            "date": "2022-09-05",
+                            "amount": 10
+                        },
+                        {
+                            "date": "2022-09-06",
+                            "amount": 20
+                        }
+                    ]
+                }
+            },
+            {
+                "id": 3,
+                "name": "francisco García",
+                "password": "3333",
+                "balance": 100,
+                "movements": {
+                    "withdraw": [
+                        {
+                            "date": "2022-09-05",
+                            "amount": 10
+                        },
+                        {
+                            "date": "2022-09-06",
+                            "amount": 20
+                        }
+                    ],
+                    "deposit": [
+                        {
+                            "date": "2022-09-05",
+                            "amount": 10
+                        },
+                        {
+                            "date": "2022-09-06",
+                            "amount": 20
+                        }
+                    ]
+                }
+            },
+            {
+                "id": 4,
+                "name": "Mariana Alvarez",
+                "password": "4444",
+                "balance": 30,
+                "movements": {
+                    "withdraw": [
+                        {
+                            "date": "2022-09-05",
+                            "amount": 10
+                        },
+                        {
+                            "date": "2022-09-06",
+                            "amount": 20
+                        }
+                    ],
+                    "deposit": [
+                        {
+                            "date": "2022-09-05",
+                            "amount": 10
+                        },
+                        {
+                            "date": "2022-09-06",
+                            "amount": 20
+                        }
+                    ]
+                }
+            }
+        ]
+        
+        
+        // función para prevenir la recarga de la pagina al hacer submit
+        document.querySelector('.login-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+        });
+
+        // Función para recuperar los datos ingresados por el usuario en el formulario de login y validarlos con la "base de datos" y guardar el usuario logeado y el balance en el local storage
+        function login() {
+            let l = localStorage;
+            let userInput = document.getElementById('user-input').value;
+            let passwordInput = document.getElementById('user-password').value;
+            // Validación de datos
+            if (users.find(user => user.name === userInput) && users.find(user => user.password === passwordInput)){
+                l.setItem("loged-user", userInput);
+                l.setItem("user-balance", users.find(user => user.name === userInput).balance);
+                l.setItem("user-movements", users.find(user => user.name === userInput).movements);
+                console.log("Datos correctos");
+                document.getElementById("user-login").style.visibility = "hidden";
+                document.getElementById("user-dashboard").style.visibility = "visible";
+                showDashboard();
+            } else {
+                document.getElementById("error-data").style.visibility = "visible";
+                console.log("Datos incorrectos");
+            }
+        }
+        
+        // Función para mostrar el dashboard del usuario logeado si dashboard tiene el valor de "visible" en el css
+        function showDashboard() {
+            if (document.getElementById("user-dashboard").style.visibility === "visible") {
+                let l = localStorage;
+                let logedUser = l.getItem("loged-user");
+                let user = users.find(user => user.name === logedUser);
+                let dashboardName = document.getElementById("user-dashboard-user-name");
+                dashboardName.innerHTML = `<h1>Welcome ${user.name}</h1>`;
+            }
+        }
+
+        // Función para mostrar el balance del usuario logeado
+        function showBalance() {
+            let l = localStorage;
+            let logedUser = l.getItem("loged-user");
+            let user = users.find(user => user.name === logedUser);
+            let dashboardActionArea = document.getElementById("user-dashboard-content-action-area");
+            dashboardActionArea.innerHTML = `<h2 class="user-balance">Your balance is: $${user.balance}</h2>`;
+        }
+
+        // Función para mostrar el formulario de retiro de dinero
+        function showWithdraw() {
+            let showWithdrawForm = document.getElementById("withdraw").style.visibility = "visible";
+            let hideDepositForm = document.getElementById("deposit").style.visibility = "hidden";
+        }
+
+        // Función para prevenir la recarga de la pagina al hacer submit
+        document.querySelector('.deposit-withdraw-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+        });
+        
+
+        // Función para retirar dinero de la cuenta del usuario logeado pero tiene que dejar minimo 10 dolares en la cuenta y registrar el movimiento en el local storage y en la "base de datos"
+        function withdrawf() {
+            let l = localStorage;
+            let logedUser = l.getItem("loged-user");
+            let user = users.find(user => user.name === logedUser);
+            let withdrawInput = document.getElementById('withdraw-input').value;
+            let userBalance = user.balance;
+            let userMovements = user.movements;
+            let userWithdraw = userMovements.withdraw;
+            let userDeposit = userMovements.deposit;
+            let date = new Date();
+            let day = date.getDate();
+            let month = date.getMonth() + 1;
+            let year = date.getFullYear();
+            let today = `${year}-${month}-${day}`;
+            if (withdrawInput <= userBalance - 10) {
+                user.balance = userBalance - withdrawInput;
+                userWithdraw.push({date: today, amount: withdrawInput});
+                l.setItem("user-balance", user.balance);
+                l.setItem("user-movements", user.movements);
+                showBalance();
+                console.log("Retiro exitoso");
+            } else {
+                console.log("No se puede retirar esa cantidad de dinero");
+            }
+        }
+
+        
+
+        // Función para mostrar el formulario de deposito de dinero
+        function showDeposit() {
+            
+            let showDepositForm = document.getElementById("deposit").style.visibility = "visible";
+            let hideWithdrawForm = document.getElementById("withdraw").style.visibility = "hidden";
+            
+        }
+
+        // Función para prevenir la recarga de la pagina al hacer submit
+        document.querySelector('.deposit-withdraw-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+        });
+        
+
+        // Función para depositar dinero a la cuenta del usuario logeado siempre y cuando no sea mayor a 990 dolares en el balance y registrar el movimiento en el local storage y en la "base de datos"
+
+        function depositf() {
+            let l = localStorage;
+            let logedUser = l.getItem("loged-user");
+            let user = users.find(user => user.name === logedUser);
+            let depositInput = document.getElementById('deposit-input').value;
+            let userBalance = user.balance;
+            let userMovements = user.movements;
+            let userWithdraw = userMovements.withdraw;
+            let userDeposit = userMovements.deposit;
+            let date = new Date();
+            let day = date.getDate();
+            let month = date.getMonth() + 1;
+            let year = date.getFullYear();
+            let today = `${year}-${month}-${day}`;
+            if (depositInput <= 990 - userBalance) {
+                user.balance = userBalance + Number(depositInput);
+                userDeposit.push({date: today, amount: depositInput});
+                l.setItem("user-balance", user.balance);
+                l.setItem("user-movements", user.movements);
+                showBalance();
+                console.log("Deposito exitoso");
+            } else {
+                console.log("No se puede depositar esa cantidad de dinero");
+            }
+        }
+
+        // Función para mostrar el historial de movimientos del usuario logeado
+        function showMovements() {
+            let l = localStorage;
+            let logedUser = l.getItem("loged-user");
+            let user = users.find(user => user.name === logedUser);
+            let dashboardActionArea = document.getElementById("user-dashboard-content-action-area");
+            dashboardActionArea.innerHTML = `<h2>Withdraws</h2>`;
+            user.movements.withdraw.forEach(movement => {
+                dashboardActionArea.innerHTML += `<p>${movement.date} - $${movement.amount}</p>`;
+            });
+            dashboardActionArea.innerHTML += `<h2>Deposits</h2>`;
+            user.movements.deposit.forEach(movement => {
+                dashboardActionArea.innerHTML += `<p>${movement.date} - $${movement.amount}</p>`;
+            });
+        }
+
+        //funcion para cerrar sesion
+
+        function logOut() {
+            let l = localStorage;
+            l.removeItem("loged-user");
+            l.removeItem("user-balance");
+            l.removeItem("user-movements");
+            window.location.href = "/";
+
+            document.getElementById("main-screen").style.visibility = "visible";
+            document.getElementById("user-dashboard").style.visibility = "hidden";
+        }
+
+    </script>
 </body>
+
 </html>

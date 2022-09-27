@@ -10,4 +10,4 @@
 let minuend = prompt("Introduce un número");
 let subtrahend = prompt("Introduce otro número, este sera restado del primero");
 let difference = minuend - subtrahend;
-console.log(difference);
+console.log("The difference between " + minuend + "and " + subtrahend + "is " + difference);

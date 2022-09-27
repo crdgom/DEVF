@@ -1,6 +1,6 @@
 /*
 
-    * dbConnection designed to simulate a real no-SQL connection for JSON collections.
+    * dbConnection designed to emulate a real no-SQL connection for JSON collections.
     * Author: Carlos Moctezuma
     * Version: 1.0
     * Contact: crdgom/github.io
@@ -8,20 +8,15 @@
 
 */
 
+// import the user data from user-data.json
+//import users from '../user-data.js';
 
-// Defining github "connection"
+function getData(){
+    let userInput = document.getElementById('user-input').value;
+    let passwordInput = document.getElementById('user-password').value;
 
-async function dbConnect(){
-
-    // Guardamos la url a la que haremos la petición dentro de una constante
-    const requestURL= "url of the json file";
-
-    // generamos un objeto request pasando la constante definida anteriormente
-    const request = new Request(requestURL);
-
-    // construimos una respuesta asincrona y buscamos la respuesta
-    const response = await fetch(request);
-
-    // Si la respuesta devuelve 200 (ok) tratamos la respuesta como JSON
-    const bankClient = await response.json()
+    console.log(userInput);
+    console.log(passwordInput);
 }
+
+export default getData;

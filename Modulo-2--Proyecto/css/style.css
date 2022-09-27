@@ -1,0 +1,372 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    color: #f2f2f2;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.action-button , .form-button{
+    width: 200px;
+    height: 50px;
+    background-color: white;
+    color: #fc466b;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.form-input{
+    font-size:16px;
+    border-width:2px;
+    border-color:#f2f2f2;
+    background-color: transparent;
+    border-style:solid;
+    padding:8px;
+    border-radius:10px;
+    color:#f2f2f2;
+    width: 100%;
+    height: 50px;
+    padding-left: 10px;
+    font-size: 1.2rem;
+}
+
+::placeholder {
+    color: #f2f2f2;
+    opacity: 1; /* Firefox */
+}
+
+/*
+
+    MAIN SCREEN STYLES
+
+*/
+
+.main-screen{
+    width: 100vw;
+    height: 100vh;
+    min-width: 100vw;
+    min-height: 100vh;
+    background: rgb(63,94,251);
+    background: linear-gradient(0deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    position: absolute;
+    top:0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    
+}
+
+.main-screen-content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main-screen-content-logo img{
+    width: 300px
+}
+
+.main-screen-content-title h1{
+    font-size: 2.5rem;
+    text-align: center;
+
+}
+
+.main-screen-content-subtitle h2{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.main-screen-content-image{
+    width: 100%;
+    height: 20%;
+}
+
+/*
+
+    END MAIN SCREEN STYLES
+
+*/
+
+/*
+
+    USER LOGIN SCREEN STYLES
+
+*/
+
+.user-login{
+    width: 100vw;
+    height: 100vh;
+    min-width: 100vw;
+    min-height: 100vh;
+    background: rgb(63,94,251);
+    background: linear-gradient(0deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    position: absolute;
+    top:0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+
+.user-login-title h2{
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.user-login-form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    height: 50%;
+}
+
+.login-form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.form-item{
+    width: 90%;
+    margin: 25px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.error-data{
+    text-align: center;
+    color: red;
+    font-size: 1.5rem;
+    visibility: hidden;
+    margin-top: 20px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    padding: 10px;
+    transition: ease-in 0.3s;
+}
+
+.error-data p{
+    color: red;
+    font-size: 1.2rem;
+}
+
+/*
+
+    END USER LOGIN SCREEN STYLES
+
+*/
+
+/*
+
+    USER DASHBOARD SCREEN STYLES
+
+*/
+
+.user-dashboard{
+    width: 100vw;
+    height: 100vh;
+    min-width: 100vw;
+    min-height: 100vh;
+    background: rgb(63,94,251);
+    background: linear-gradient(0deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    position: absolute;
+    top:0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    visibility: hidden;
+}
+
+.user-dashboard-content{
+    width: 100vw;
+    height: 100vh;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+.user-dashboard-content-title h1{
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.user-dashboard-content-subtitle h2{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.user-dashboard-content-actions{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.user-dashboard-content-action-menu{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+.user-dashboard-content-action-area{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: scroll;
+}
+
+.user-balance{
+    font-size: 1.5rem;
+}
+
+.deposit-withdraw-form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#withdraw{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+    visibility: hidden;
+    position:relative;
+    top: 0;
+    visibility: hidden;
+}
+
+#deposit{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+    visibility: hidden;
+    position:relative;
+    top: -200px;
+}
+
+
+.user-dashboard-content-action-button{
+    width: 100%;
+    display: flex;
+    position: absolute;
+    bottom: 12px;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+@media screen and (min-width: 992px) {
+    
+
+
+/*
+
+    MAIN SCREEN DESKTOP STYLES 
+
+*/
+
+    .main-screen-content-image{
+        width: auto;
+        height: auto;
+
+    }
+
+    .main-screen-content-start-button{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        align-content: flex-end;
+        margin-right: 150px;
+    }
+
+/*
+
+USER LOGIN SCREEN DESKTOP STYLES
+
+*/
+
+    .login-form{
+        width: 30%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}
+
