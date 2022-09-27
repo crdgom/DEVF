@@ -25,7 +25,7 @@ jobs:
   deploy:
     environment:
       name: github-pages-atm
-      url: ${{ steps.deployment.outputs.page_url/atm }}
+      url: https://crdgom.github.io/atm
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
