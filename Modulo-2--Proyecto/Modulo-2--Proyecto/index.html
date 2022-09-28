@@ -68,6 +68,7 @@
                 </div>
                 
                 <div id="user-dashboard-content-action-area" class="user-dashboard-content-action-area">
+                    <div id="user-dashboard-content-action-area-info" class="user-dashboard-content-action-area-info"></div>
                     <form class="deposit-withdraw-form" action="">
                         <div id="withdraw">
                             <div class="form-item">
@@ -259,14 +260,29 @@
             let l = localStorage;
             let logedUser = l.getItem("loged-user");
             let user = users.find(user => user.name === logedUser);
-            let dashboardActionArea = document.getElementById("user-dashboard-content-action-area");
+            let dashboardActionArea = document.getElementById("user-dashboard-content-action-area-info");
+            dashboardActionArea.style.visibility = "visible";
+            dashboardActionArea.style.top = "0px";
+            dashboardActionArea.style.color = "white";
+            dashboardActionArea.style.backgroundColor = "transparent";
+            dashboardActionArea.style.height = "auto";
+            dashboardActionArea.style.borderRadius = "0px";
+            dashboardActionArea.style.padding = "0px 0px";
+            dashboardActionArea.style.textAlign = "center";
+            dashboardActionArea.style.width = "80%";
             dashboardActionArea.innerHTML = `<h2 class="user-balance">Your balance is: $${user.balance}</h2>`;
+
+            // hide deposit and withdraw form
+            document.getElementById("withdraw").style.visibility = "hidden";
+            document.getElementById("deposit").style.visibility = "hidden";
         }
 
         // Función para mostrar el formulario de retiro de dinero
         function showWithdraw() {
             let showWithdrawForm = document.getElementById("withdraw").style.visibility = "visible";
             let hideDepositForm = document.getElementById("deposit").style.visibility = "hidden";
+            // hide dashboard action area info
+            let dashboardActionArea = document.getElementById("user-dashboard-content-action-area-info").style.visibility = "hidden";
         }
 
         // Función para prevenir la recarga de la pagina al hacer submit
@@ -296,9 +312,19 @@
                 l.setItem("user-balance", user.balance);
                 l.setItem("user-movements", user.movements);
                 showBalance();
-                console.log("Retiro exitoso");
+                withdrawInput.value = '';
             } else {
-                console.log("No se puede retirar esa cantidad de dinero");
+                let dashboardActionArea = document.getElementById("user-dashboard-content-action-area-info");
+                dashboardActionArea.style.visibility = "visible";
+                dashboardActionArea.style.top = "180px";
+                dashboardActionArea.style.color = "red";
+                dashboardActionArea.style.backgroundColor = "white";
+                dashboardActionArea.style.height = "auto";
+                dashboardActionArea.style.borderRadius = "10px";
+                dashboardActionArea.style.padding = "0px 10px";
+                dashboardActionArea.style.textAlign = "center";
+                dashboardActionArea.style.width = "80%";
+                dashboardActionArea.innerHTML = `Your account cannot have less than 10 dollars.`;
             }
         }
 
@@ -309,6 +335,8 @@
             
             let showDepositForm = document.getElementById("deposit").style.visibility = "visible";
             let hideWithdrawForm = document.getElementById("withdraw").style.visibility = "hidden";
+            // hide dashboard action area info
+            let dashboardActionArea = document.getElementById("user-dashboard-content-action-area-info").style.visibility = "hidden";
             
         }
 
@@ -340,18 +368,41 @@
                 l.setItem("user-balance", user.balance);
                 l.setItem("user-movements", user.movements);
                 showBalance();
-                console.log("Deposito exitoso");
+                depositInput.value = '';
             } else {
-                console.log("No se puede depositar esa cantidad de dinero");
+                let dashboardActionArea = document.getElementById("user-dashboard-content-action-area-info");
+                dashboardActionArea.style.visibility = "visible";
+                dashboardActionArea.style.top = "180px";
+                dashboardActionArea.style.color = "red";
+                dashboardActionArea.style.backgroundColor = "white";
+                dashboardActionArea.style.height = "auto";
+                dashboardActionArea.style.borderRadius = "10px";
+                dashboardActionArea.style.padding = "0px 10px";
+                dashboardActionArea.style.width = "80%";
+                dashboardActionArea.innerHTML = `Your account cannot have more than $990.`;
             }
         }
 
         // Función para mostrar el historial de movimientos del usuario logeado
         function showMovements() {
+            // hide deposit and withdraw form
+            document.getElementById("withdraw").style.visibility = "hidden";
+            document.getElementById("deposit").style.visibility = "hidden";
             let l = localStorage;
             let logedUser = l.getItem("loged-user");
             let user = users.find(user => user.name === logedUser);
-            let dashboardActionArea = document.getElementById("user-dashboard-content-action-area");
+            let dashboardActionArea = document.getElementById("user-dashboard-content-action-area-info");
+            dashboardActionArea.style.top = "0px";
+            dashboardActionArea.style.color = "white";
+            dashboardActionArea.style.backgroundColor = "transparent";
+            dashboardActionArea.style.height = "auto";
+            dashboardActionArea.style.borderRadius = "0px";
+            dashboardActionArea.style.padding = "0px 0px";
+            dashboardActionArea.style.width = "80%";
+            dashboardActionArea.style.height = "60%"
+            dashboardActionArea.style.textAlign = "center";
+            dashboardActionArea.style.visibility = "visible";
+            dashboardActionArea.style.overflowX = "scroll";
             dashboardActionArea.innerHTML = `<h2>Withdraws</h2>`;
             user.movements.withdraw.forEach(movement => {
                 dashboardActionArea.innerHTML += `<p>${movement.date} - $${movement.amount}</p>`;
