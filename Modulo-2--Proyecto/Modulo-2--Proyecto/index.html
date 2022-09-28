@@ -72,7 +72,7 @@
                     <form class="deposit-withdraw-form" action="">
                         <div id="withdraw">
                             <div class="form-item">
-                                <input class="form-input" type="number" name="withdraw" id="withdraw-input" placeholder="amount to withdraw">
+                                <input class="form-input" type="number" name="withdraw" id="withdraw-input" placeholder="amount to withdraw" min="1">
                             </div>
                             <div class="form-item">
                                 <input id="form-input-withdraw" class="form-input" name="withdraw-button" onclick="withdrawf()" type="submit"
@@ -234,13 +234,12 @@
                 l.setItem("loged-user", userInput);
                 l.setItem("user-balance", users.find(user => user.name === userInput).balance);
                 l.setItem("user-movements", users.find(user => user.name === userInput).movements);
-                console.log("Datos correctos");
+    
                 document.getElementById("user-login").style.visibility = "hidden";
                 document.getElementById("user-dashboard").style.visibility = "visible";
                 showDashboard();
             } else {
                 document.getElementById("error-data").style.visibility = "visible";
-                console.log("Datos incorrectos");
             }
         }
         
@@ -306,7 +305,7 @@
             let month = date.getMonth() + 1;
             let year = date.getFullYear();
             let today = `${year}-${month}-${day}`;
-            if (withdrawInput <= userBalance - 10) {
+            if (withdrawInput <= userBalance - 10 && (withdrawInput > 0 || withdrawInput == NaN, withdrawInput == undefined, withdrawInput == null)) {
                 user.balance = userBalance - withdrawInput;
                 userWithdraw.push({date: today, amount: withdrawInput});
                 l.setItem("user-balance", user.balance);
@@ -362,7 +361,7 @@
             let month = date.getMonth() + 1;
             let year = date.getFullYear();
             let today = `${year}-${month}-${day}`;
-            if (depositInput <= 990 - userBalance) {
+            if (depositInput <= 990 - userBalance && (withdrawInput > 0 || withdrawInput == NaN, withdrawInput == undefined, withdrawInput == null)) {
                 user.balance = userBalance + Number(depositInput);
                 userDeposit.push({date: today, amount: depositInput});
                 l.setItem("user-balance", user.balance);
