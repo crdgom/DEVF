@@ -265,7 +265,16 @@ body{
     align-content: center;
     justify-content: flex-start;
     align-items: center;
-    overflow: scroll;
+    position:relative
+}
+
+.user-dashboard-content-action-area-info{
+    position: absolute;
+    top: 0;
+    color:red;
+    overflow-x: scroll;
+    height: 65%;
+    width: 50%;
 }
 
 .user-balance{
@@ -319,6 +328,8 @@ body{
     flex-wrap: nowrap;
     align-content: center;
     align-items: center;
+    position: relative;
+    bottom: 110px;
 }
 
 
