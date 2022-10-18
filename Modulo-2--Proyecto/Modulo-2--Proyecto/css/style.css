@@ -272,9 +272,10 @@ body{
     position: absolute;
     top: 0;
     color:red;
-    overflow-x: scroll;
+    overflow-y: scroll;
     height: 65%;
     width: 50%;
+    overflow-x: hidden;
 }
 
 .user-balance{

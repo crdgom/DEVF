@@ -120,3 +120,11 @@ function operations() {
         screenValue.innerHTML = screen
     }
 }
+
+
+function detectorSwiper() {
+
+    //revisar si existe una clase clase dentro del html
+
+    
+}
