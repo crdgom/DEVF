@@ -1,4 +1,4 @@
-// como crear un prototipo
+/* // como crear un prototipo
 
 
 function Punto2D(x,y){
@@ -171,4 +171,51 @@ class Animales{
     __str__(){
         return `Soy un ${this.tipo} y me llamo ${this.nombre}`;
     }
+} */
+
+
+class Animal{
+    constructor(legs){
+        this.brain = true;
+        this.legs = legs;
+    }
 }
+
+class Pet extends Animal{
+    constructor(legs, flea){
+        super(legs);
+        this.fleas = 0;
+    }
+}
+
+class Dog extends Pet{
+    constructor (fleas){
+        super(4);
+        this.fleas = fleas;
+    }
+}
+
+class Cat extends Pet{
+    constructor (fleas){
+        super(4);
+        this.fleas = fleas;
+    }
+}
+
+class Human extends Animal{
+    constructor (legs){
+        super(legs);
+    }
+}
+
+const perro1 = new Dog(8);
+
+console.log(perro1);
+
+const gato1 = new Cat(4);
+
+console.log(gato1);
+
+const humano1 = new Human(2);
+
+console.log(humano1);
