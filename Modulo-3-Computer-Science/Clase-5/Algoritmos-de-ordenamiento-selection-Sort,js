@@ -1,0 +1,27 @@
+// Algorithm Selection Sort (Ordenamiento por Selección)
+
+const selectionSort = (arr) => {
+
+    for (let i = 0; i < arr.length - 1; i++) {
+        let min = i
+            console.log(`min: ${min}`)
+        for (let j = i + 1; j < arr.length; j++) {
+            if (arr[j] < arr[min]) {
+                min = j
+                console.log(`min: ${min}`)
+            }
+        }
+
+        if (min !== i) {
+            [arr[i], arr[min]] = [arr[min], arr[i]]
+
+            console.log(`arr: ${arr}`)
+        }
+    }
+
+    return arr
+}
+
+const arr = [5, 3, 1, 4, 2, 3, 10, 7, 6, 9, 8]
+
+console.log(selectionSort(arr))
