@@ -1,14 +1,17 @@
-import React from 'react'
+import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+/* los estilos de las dependencias van primero que mis estilos */
 import 'bootstrap/dist/css/bootstrap.min.css'
+/* mis estilos */
+import './styles/index.scss'
 
 import App from './components/App'
-import './styles/index.css'
 
 const root = document.getElementById('root')
 
 createRoot(root).render(
-  <React.StrictMode>
+  /* El StricMode se borra cuando voy desplegar mi aplicación */
+  <>
     <App />
-  </React.StrictMode>
+  </>
 )
